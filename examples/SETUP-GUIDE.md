@@ -5,7 +5,7 @@
 ### Step 1: Install the Package
 
 ```bash
-composer require sql-commands/laravel-practice
+composer require brybry/sql-practise
 ```
 
 ### Step 2: Create the Controller

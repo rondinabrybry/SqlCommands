@@ -1,5 +1,5 @@
 {
-    "name": "sql-commands/laravel-practice",
+    "name": "brybry/sql-practise",
     "description": "A secure PHP package for SQL learning and practice with Laravel and SQLite integration.",
     "type": "library",
     "version": "1.0.0",
@@ -7,8 +7,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "SQL Commands Team",
-            "email": "info@sqlcommands.dev"
+            "name": "Bryan Rondinab",
+            "email": "bryan@brybry.dev"
         }
     ],
     "require": {

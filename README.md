@@ -14,7 +14,7 @@ A **secure** PHP package for SQL learning and practice with Laravel and SQLite i
 Install via Composer:
 
 ```bash
-composer require sql-commands/laravel-practice
+composer require brybry/sql-practise
 ```
 
 For Laravel projects, the service provider will be automatically registered.
@@ -309,10 +309,10 @@ MIT License - see LICENSE file for details.
 
 ## 🔗 Links
 
-- [GitHub Repository](https://github.com/sql-commands/laravel-practice)
-- [Documentation](https://sql-commands.dev)
-- [Issue Tracker](https://github.com/sql-commands/laravel-practice/issues)
+- [GitHub Repository](https://github.com/rondinabrybry/SqlCommands)
+- [Documentation](https://github.com/rondinabrybry/SqlCommands#readme)
+- [Issue Tracker](https://github.com/rondinabrybry/SqlCommands/issues)
 
 ---
 
-**Made with ❤️ for SQL education and Laravel developers**
+**Made with ❤️ for SQL education and Laravel developers by Bryan Rondinab**

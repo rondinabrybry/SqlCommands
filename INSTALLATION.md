@@ -61,7 +61,7 @@ SqlCommands/
 
 1. **Install the package:**
    ```bash
-   composer require sql-commands/laravel-practice
+   composer require brybry/sql-practise
    ```
 
 2. **Publish configuration:**
@@ -88,7 +88,7 @@ SqlCommands/
 
 1. **Install via Composer:**
    ```bash
-   composer require sql-commands/laravel-practice
+   composer require brybry/sql-practise
    ```
 
 2. **Use in your code:**
