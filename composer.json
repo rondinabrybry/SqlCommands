@@ -1,5 +1,5 @@
 {
-    "name": "brybry/sql-practise",
+    "name": "brybry/sql-practice",
     "description": "A secure PHP package for SQL learning and practice with Laravel and SQLite integration.",
     "type": "library",
     "version": "1.0.0",

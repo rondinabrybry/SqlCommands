@@ -14,7 +14,7 @@ A **secure** PHP package for SQL learning and practice with Laravel and SQLite i
 Install via Composer:
 
 ```bash
-composer require brybry/sql-practise
+composer require brybry/sql-practice
 ```
 
 For Laravel projects, the service provider will be automatically registered.

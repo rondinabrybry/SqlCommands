@@ -61,7 +61,7 @@ SqlCommands/
 
 1. **Install the package:**
    ```bash
-   composer require brybry/sql-practise
+   composer require brybry/sql-practice
    ```
 
 2. **Publish configuration:**
@@ -88,7 +88,7 @@ SqlCommands/
 
 1. **Install via Composer:**
    ```bash
-   composer require brybry/sql-practise
+   composer require brybry/sql-practice
    ```
 
 2. **Use in your code:**

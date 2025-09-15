@@ -5,7 +5,7 @@
 ### Step 1: Install the Package
 
 ```bash
-composer require brybry/sql-practise
+composer require brybry/sql-practice
 ```
 
 ### Step 2: Create the Controller
