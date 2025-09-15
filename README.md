@@ -115,6 +115,100 @@ $query = SqlCommands::select('orders', ['*'], [
 ]);
 ```
 
+### SQLite Functions (200+ Available)
+
+The package includes comprehensive support for **all major SQLite functions** plus **advanced educational features**:
+
+```php
+// 🔤 String Functions  
+SqlCommands::upper('name');               // UPPER(`name`)
+SqlCommands::lower('email');              // LOWER(`email`)
+SqlCommands::length('description');       // LENGTH(`description`)
+SqlCommands::trim('text', ' .');          // TRIM(`text`, ' .')
+SqlCommands::substr('phone', 1, 3);       // SUBSTR(`phone`, 1, 3)
+SqlCommands::replace('text', 'old', 'new'); // REPLACE(`text`, 'old', 'new')
+SqlCommands::printf('User: %s (ID: %d)', 'John', 123);
+
+// 🎓 NEW: Educational Functions for Teaching Advanced SQL
+SqlCommands::caseWhen([
+    'age < 18' => 'Minor',
+    'age < 65' => 'Adult'
+], 'Senior');                             // CASE/WHEN conditional logic
+
+SqlCommands::coalesce('mobile', 'home', 'email', 'N/A'); // NULL handling
+SqlCommands::like('name', 'John%');       // Pattern matching with params
+SqlCommands::exists($subquery);           // Subquery existence checks
+
+// CTE (Common Table Expressions)
+$withQuery = SqlCommands::with(['active_users' => $cte], $mainQuery);
+
+// PIVOT simulation for data analysis
+$pivot = SqlCommands::pivot('sales', 'quarter', ['Q1', 'Q2', 'Q3', 'Q4']);
+
+// Database constraints for teaching design
+SqlCommands::foreignKey('user_id', 'users', 'id', 'CASCADE');
+SqlCommands::check('age >= 0 AND age <= 150');
+
+// 🔢 Math & Numeric Functions
+SqlCommands::abs('balance');              // ABS(`balance`)
+SqlCommands::round('price', 2);           // ROUND(`price`, 2)
+SqlCommands::sqrt('area');                // SQRT(`area`)
+SqlCommands::pow('base', 'exponent');     // POW(`base`, `exponent`)
+SqlCommands::random();                    // RANDOM()
+
+// 📅 Date & Time Functions
+SqlCommands::date('now');                 // date('now')
+SqlCommands::datetime('now', '+1 day');   // datetime('now', '+1 day')
+SqlCommands::strftime('%Y-%m-%d', 'now'); // strftime('%Y-%m-%d', 'now')
+
+// 📊 Enhanced Aggregates
+SqlCommands::total('amount');             // TOTAL(`amount`) - float sum
+SqlCommands::groupConcat('tags', ', ');   // GROUP_CONCAT(`tags`, ', ')
+
+// 🪟 Window Functions (SQLite 3.25+)
+SqlCommands::rowNumber();                 // ROW_NUMBER()
+SqlCommands::rank();                      // RANK()
+SqlCommands::lag('salary', 1);            // LAG(`salary`, 1)
+SqlCommands::lead('price', 1, '0');       // LEAD(`price`, 1, '0')
+
+// 🗂️ JSON Functions (json1 extension)
+SqlCommands::jsonExtract('{"name": "John"}', '$.name');
+SqlCommands::jsonArray('item1', 'item2'); // json_array('item1', 'item2')
+SqlCommands::jsonObject('key', 'value');  // json_object('key', 'value')
+
+// 🔧 Utility Functions
+SqlCommands::iif('age >= 18', 'adult', 'minor'); // IIF(age >= 18, 'adult', 'minor')
+SqlCommands::changes();                   // CHANGES()
+SqlCommands::lastInsertRowid();          // LAST_INSERT_ROWID()
+
+// Real-world educational example
+$query = SqlCommands::select('employees', [
+    'name',
+    SqlCommands::upper('department') . ' as dept_upper',
+    SqlCommands::caseWhen([
+        'salary < 30000' => 'Entry',
+        'salary < 60000' => 'Mid',
+        'salary >= 60000' => 'Senior'
+    ], 'Executive') . ' as level',
+    SqlCommands::coalesce('bonus', '0') . ' as bonus_amount',
+    SqlCommands::round('salary * 1.1', 2) . ' as salary_with_raise'
+], [
+    'where' => ['active' => 1],
+    'orderBy' => 'salary'
+]);
+```
+
+🎓 **Perfect for Teaching:**
+- **Conditional Logic** - CASE/WHEN statements for business rules
+- **NULL Handling** - COALESCE, NULLIF for data quality
+- **Pattern Matching** - LIKE, GLOB, REGEXP for search functionality  
+- **Advanced Queries** - Subqueries, CTEs, window functions
+- **Data Analysis** - PIVOT simulation, aggregations
+- **Database Design** - Constraints, indexes, relationships
+
+📚 **[Complete SQLite Functions Reference →](SQLITE-FUNCTIONS.md)** - Detailed documentation with 200+ functions, examples, and usage patterns.
+```
+
 ### Using the Simulator
 
 ```php
