@@ -1,0 +1,39 @@
+{
+    "name": "sql-commands/laravel-practice",
+    "description": "A secure PHP package for SQL learning and practice with Laravel and SQLite integration.",
+    "type": "library",
+    "version": "1.0.0",
+    "keywords": ["sql", "laravel", "sqlite", "education", "practice", "learning"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SQL Commands Team",
+            "email": "info@sqlcommands.dev"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-pdo": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SqlCommands\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SqlCommands\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SqlCommands\\Providers\\SqlCommandsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
