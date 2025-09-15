@@ -36,23 +36,21 @@ class SqlCommandsServiceProvider extends ServiceProvider
             __DIR__ . '/../../config/sql-commands.php' => config_path('sql-commands.php'),
         ], 'config');
 
-        // Publish migration files
-        $this->publishes([
-            __DIR__ . '/../../database/migrations' => database_path('migrations'),
-        ], 'migrations');
-
-        // Load routes for web interface (optional)
-        if ($this->app->runningInConsole() === false) {
-            $this->loadRoutesFrom(__DIR__ . '/../../routes/web.php');
-        }
+        // Load routes automatically
+        $this->loadRoutesFrom(__DIR__ . '/../../routes/web.php');
 
         // Load views
         $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'sql-commands');
 
-        // Publish views
+        // Publish views (optional, users can customize)
         $this->publishes([
             __DIR__ . '/../../resources/views' => resource_path('views/vendor/sql-commands'),
         ], 'views');
+
+        // Publish example files for reference
+        $this->publishes([
+            __DIR__ . '/../../examples' => base_path('sql-practice-examples'),
+        ], 'examples');
     }
 
     /**

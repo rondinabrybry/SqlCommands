@@ -2,7 +2,17 @@
 
 A **secure** PHP package for SQL learning and practice with Laravel and SQLite integration. Perfect for educational environments where students need to practice SQL queries safely.
 
-## 🔒 Security Features
+## � **NEW: Zero-Configuration Installation**
+
+**Routes and web interface are now included automatically!** No manual setup required.
+
+```bash
+composer require brybry/sql-practice
+```
+
+Then visit: `http://yourapp.com/sql-practice` - That's it!
+
+## �🔒 Security Features
 
 - **SQL Injection Prevention**: All queries use parameterized statements
 - **Input Sanitization**: Table and column names are properly escaped

@@ -10,7 +10,7 @@ return [
     | This should be separate from your main application database.
     |
     */
-    'practice_database_path' => database_path('practice.sqlite'),
+    'practice_database_path' => env('SQL_PRACTICE_DB_PATH', 'practice.sqlite'),
 
     /*
     |--------------------------------------------------------------------------
