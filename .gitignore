@@ -1,0 +1,48 @@
+# Dependencies
+/vendor/
+composer.lock
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Log files
+*.log
+
+# Test databases
+*.sqlite
+*.db
+
+# PHP CS Fixer
+.php_cs
+.php_cs.cache
+
+# PHPUnit
+.phpunit.result.cache
+phpunit.xml
+
+# Temporary files
+tmp/
+temp/
+
+# Python (in case someone uses Python tools)
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Node.js (in case someone uses Node tools)
+node_modules/
+npm-debug.log*
